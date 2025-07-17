@@ -9,7 +9,8 @@ An interactive installer for [Nerd Fonts](https://www.nerdfonts.com/) and [Casca
 > **TL;DR**: To quickly install Nerd Fonts using the interactive web installer, run the following command in your PowerShell terminal:
 >
 > ```powershell
-> & ([scriptblock]::Create((iwr 'https://to.loredo.me/Install-NerdFont.ps1')))
+> & ([scriptblock]::Create((iwr 'https://raw.githubusercontent.com/deltoss/nerd-fonts-installer-PS/main/Invoke-NerdFontInstaller.ps1')))
+
 > ```
 
 ![PowerShell Web Installer for Nerd Fonts](https://raw.githubusercontent.com/jpawlowski/nerd-fonts-installer-PS/main/images/nerd-fonts-installer.gif)
@@ -54,13 +55,7 @@ You can conveniently run this script directly from the web to install Nerd Fonts
 #### Run the Interactive Installer
 
 ```powershell
-& ([scriptblock]::Create((iwr 'https://to.loredo.me/Install-NerdFont.ps1')))
-```
-
-Or alternatively without the shortened URL:
-
-```powershell
-& ([scriptblock]::Create((iwr 'https://raw.githubusercontent.com/jpawlowski/nerd-fonts-installer-PS/main/Invoke-NerdFontInstaller.ps1')))
+& ([scriptblock]::Create((iwr 'https://raw.githubusercontent.com/deltoss/nerd-fonts-installer-PS/main/Invoke-NerdFontInstaller.ps1')))
 ```
 
 > **IMPORTANT**: A code signature cannot be verified when running the script directly from the web.
@@ -76,7 +71,8 @@ You can pass parameters to the script just like any other PowerShell script. Her
 To install specific fonts by name, use the `-Name` parameter:
 
 ```powershell
-& ([scriptblock]::Create((iwr 'https://to.loredo.me/Install-NerdFont.ps1'))) -Name hack, heavy-data
+
+& ([scriptblock]::Create((iwr 'https://raw.githubusercontent.com/deltoss/nerd-fonts-installer-PS/main/Invoke-NerdFontInstaller.ps1'))) -Name hack, heavy-data
 ```
 
 ##### Install Fonts Unattended
@@ -84,7 +80,7 @@ To install specific fonts by name, use the `-Name` parameter:
 To install fonts without any prompts, use the `-Confirm:$false` parameter:
 
 ```powershell
-& ([scriptblock]::Create((iwr 'https://to.loredo.me/Install-NerdFont.ps1'))) -Confirm:$false -Name hack, heavy-data
+& ([scriptblock]::Create((iwr 'https://raw.githubusercontent.com/deltoss/nerd-fonts-installer-PS/main/Invoke-NerdFontInstaller.ps1'))) -Confirm:$false -Name hack, heavy-data
 ```
 
 ##### List or Search Font Names
@@ -92,9 +88,9 @@ To install fonts without any prompts, use the `-Confirm:$false` parameter:
 To list all available fonts or search for specific fonts, use the `-List` parameter:
 
 ```powershell
-& ([scriptblock]::Create((iwr 'https://to.loredo.me/Install-NerdFont.ps1'))) -List All
-& ([scriptblock]::Create((iwr 'https://to.loredo.me/Install-NerdFont.ps1'))) -List hack
-& ([scriptblock]::Create((iwr 'https://to.loredo.me/Install-NerdFont.ps1'))) -List cas*
+& ([scriptblock]::Create((iwr 'https://raw.githubusercontent.com/deltoss/nerd-fonts-installer-PS/main/Invoke-NerdFontInstaller.ps1'))) -List All
+& ([scriptblock]::Create((iwr 'https://raw.githubusercontent.com/deltoss/nerd-fonts-installer-PS/main/Invoke-NerdFontInstaller.ps1'))) -List hack
+& ([scriptblock]::Create((iwr 'https://raw.githubusercontent.com/deltoss/nerd-fonts-installer-PS/main/Invoke-NerdFontInstaller.ps1'))) -List cas*
 ```
 
 ##### Get Help with Enhanced Parameter Options
@@ -102,7 +98,7 @@ To list all available fonts or search for specific fonts, use the `-List` parame
 To get help with the script and see enhanced parameter options, use the `-Help` parameter:
 
 ```powershell
-& ([scriptblock]::Create((iwr 'https://to.loredo.me/Install-NerdFont.ps1'))) -Help ?
+& ([scriptblock]::Create((iwr 'https://raw.githubusercontent.com/deltoss/nerd-fonts-installer-PS/main/Invoke-NerdFontInstaller.ps1'))) -Help ?
 ```
 
 ### `Option 2`: Install and Run Locally from PowerShell Gallery
